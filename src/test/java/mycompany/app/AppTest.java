@@ -34,7 +34,13 @@ public class AppTest {
     @Test
     public void testLoginWithValidEmailValidPassword() throws InterruptedException { 
         driver.get(url);
-        wait.until(ExpectedConditions.titleContains("Login Page |")); 
+        try {
+            wait.until(ExpectedConditions.titleContains("Login Page |")); 
+        } catch (Exception e) {
+            System.out.println("Page title is: " + driver.getTitle());
+            System.out.println("Page source is: " + driver.getPageSource());
+            throw e;
+        }
 
         driver.findElement(By.name("email")).sendKeys(validEmail);
         driver.findElement(By.name("password")).sendKeys(validPassword);
@@ -48,7 +54,13 @@ public class AppTest {
     @Test
     public void testLoginWithValidEmailInvalidPassword() throws InterruptedException { 
         driver.get(url);
-        wait.until(ExpectedConditions.titleContains("Login Page |")); 
+        try {
+            wait.until(ExpectedConditions.titleContains("Login Page |")); 
+        } catch (Exception e) {
+            System.out.println("Page title is: " + driver.getTitle());
+            System.out.println("Page source is: " + driver.getPageSource());
+            throw e;
+        }
 
         driver.findElement(By.name("email")).sendKeys(validEmail);
         driver.findElement(By.name("password")).sendKeys(invalidPassword);
