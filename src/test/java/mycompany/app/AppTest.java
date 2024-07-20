@@ -31,11 +31,8 @@ public class AppTest
 
     @Before
     public void setUp() { 
-	        System.setProperty("webdriver.chrome.driver", "/usr/local/bin/chromedriver");
-    		driver = new ChromeDriver();
-    		wait = new WebDriverWait(driver, 10);
-		//driver = new HtmlUnitDriver(); 
-		//wait = new WebDriverWait(driver, 10); 
+		driver = new HtmlUnitDriver(); 
+		wait = new WebDriverWait(driver, 10); 
 	} 
 
 	@After
