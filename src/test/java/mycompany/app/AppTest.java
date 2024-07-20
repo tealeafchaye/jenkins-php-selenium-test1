@@ -46,6 +46,7 @@ public class AppTest
 
 		//get web page
 		driver.get(url);
+		System.out.println("Page title is: " + driver.getTitle());
 		//wait until page is loaded or timeout error
 		wait.until(ExpectedConditions.titleContains("Login Page |")); 
 
