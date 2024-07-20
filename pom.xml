@@ -25,19 +25,4 @@
         <version>2.44.0</version>
     </dependency>
   </dependencies>
-<build>
-  <plugins>
-    <plugin>
-      <groupId>org.apache.maven.plugins</groupId>
-      <artifactId>maven-surefire-plugin</artifactId>
-      <version>4.0.0</version>
-      <configuration>
-        <includes>
-          <include>**/*Test.java</include>
-        </includes>
-      </configuration>
-    </plugin>
-  </plugins>
-</build>
-
 </project>
